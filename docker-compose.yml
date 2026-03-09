@@ -1,0 +1,15 @@
+services:
+  ucip-wrapper:
+    build: .
+    container_name: ucip-wrapper
+    ports:
+      - "8080:8080"
+    environment:
+      AIR_HOST: 10.13.96.38
+      AIR_PORT: 10010
+      AIR_USER: ucip_pfe
+      AIR_PASSWORD: ucip_pfe
+      AIR_NODE_TYPE: EXT
+      AIR_HOST_NAME: minsat
+      AIR_TIMEOUT_MS: 10000
+    restart: unless-stopped
