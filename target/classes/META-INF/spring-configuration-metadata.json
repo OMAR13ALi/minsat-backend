@@ -1,0 +1,60 @@
+{
+  "groups": [
+    {
+      "name": "air",
+      "type": "com.minsat.config.AirConfig",
+      "sourceType": "com.minsat.config.AirConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "air.debug",
+      "type": "java.lang.Boolean",
+      "sourceType": "com.minsat.config.AirConfig",
+      "defaultValue": false
+    },
+    {
+      "name": "air.host",
+      "type": "java.lang.String",
+      "sourceType": "com.minsat.config.AirConfig",
+      "defaultValue": "10.13.0.53"
+    },
+    {
+      "name": "air.host-name",
+      "type": "java.lang.String",
+      "sourceType": "com.minsat.config.AirConfig",
+      "defaultValue": "minsat"
+    },
+    {
+      "name": "air.node-type",
+      "type": "java.lang.String",
+      "sourceType": "com.minsat.config.AirConfig",
+      "defaultValue": "EXT"
+    },
+    {
+      "name": "air.password",
+      "type": "java.lang.String",
+      "sourceType": "com.minsat.config.AirConfig",
+      "defaultValue": "kade123"
+    },
+    {
+      "name": "air.port",
+      "type": "java.lang.Integer",
+      "sourceType": "com.minsat.config.AirConfig",
+      "defaultValue": 10010
+    },
+    {
+      "name": "air.timeout-ms",
+      "type": "java.lang.Integer",
+      "sourceType": "com.minsat.config.AirConfig",
+      "defaultValue": 10000
+    },
+    {
+      "name": "air.user",
+      "type": "java.lang.String",
+      "sourceType": "com.minsat.config.AirConfig",
+      "defaultValue": "kade"
+    }
+  ],
+  "hints": []
+}

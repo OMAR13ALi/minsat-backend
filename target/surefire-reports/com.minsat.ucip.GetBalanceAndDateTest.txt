@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.minsat.ucip.GetBalanceAndDateTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.129 s -- in com.minsat.ucip.GetBalanceAndDateTest

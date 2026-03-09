@@ -1,0 +1,4 @@
+com\minsat\air\transport\AirTransportTest.class
+com\minsat\air\xml\XmlBuilderTest.class
+com\minsat\air\xml\XmlParserTest.class
+com\minsat\ucip\GetBalanceAndDateTest.class

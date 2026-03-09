@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: com.minsat.air.xml.XmlBuilderTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.095 s <<< FAILURE! -- in com.minsat.air.xml.XmlBuilderTest
+com.minsat.air.xml.XmlBuilderTest.buildsBasicRequest -- Time elapsed: 0.077 s <<< FAILURE!
+java.lang.AssertionError: 
+
+Expecting actual:
+  "<?xml version="1.0"?>
+<methodCall>
+  <methodName>GetBalanceAndDate</methodName>
+  <params>
+    <param>
+      <value>
+        <struct>
+          <member><name>originNodeType</name><value><string>EXT</string></value></member>
+          <member><name>originHostName</name><value><string>minsat</string></value></member>
+          <member><name>originTransactionID</name><value><string>bbf6f10d-c264-40e1-a139-de56479a2fe8</string></value></member>
+          <member><name>originTimeStamp</name><value><dateTime.iso8601>20260309T090149+0000</dateTime.iso8601></value></member>
+          <member><name>subscriberNumber</name><value><string>21369000001</string></value></member>
+        </struct>
+      </value>
+    </param>
+  </params>
+</methodCall>"
+to contain:
+  "<n>subscriberNumber</n>" 
+	at com.minsat.air.xml.XmlBuilderTest.buildsBasicRequest(XmlBuilderTest.java:32)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
