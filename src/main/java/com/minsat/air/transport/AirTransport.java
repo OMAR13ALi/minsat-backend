@@ -11,6 +11,9 @@ import java.net.Socket;
 import java.net.SocketTimeoutException;
 import java.nio.charset.StandardCharsets;
 import java.time.Instant;
+import java.time.ZoneOffset;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Base64;
 
 @Component
@@ -39,12 +42,12 @@ public class AirTransport {
             (config.getUser() + ":" + config.getPassword()).getBytes(StandardCharsets.UTF_8)
         );
 
-        String httpRequest = "POST /Air HTTP/2.0\r\n"
+        String httpRequest = "POST /Air HTTP/1.0\r\n"
             + "Accept: text/xml\r\n"
             + "Connection: keep-alive\r\n"
             + "Content-Length: " + bodyBytes.length + "\r\n"
             + "Content-Type: text/xml\r\n"
-            + "Date: " + Instant.now().toString() + "\r\n"
+            + "Date: " + buildDateHeader() + "\r\n"
             + "Host: " + config.getHost() + "\r\n"
             + "User-Agent: UGw Server/4.3/1.0\r\n"
             + "Authorization: Basic " + credentials + "\r\n"
@@ -98,6 +101,12 @@ public class AirTransport {
         }
         // Fallback: return everything (may already be just XML)
         return full.trim();
+    }
+
+    /** Override in tests or subclasses to inject a fixed date. */
+    protected String buildDateHeader() {
+        return ZonedDateTime.now(ZoneOffset.UTC)
+            .format(DateTimeFormatter.RFC_1123_DATE_TIME);
     }
 
     private void debug(String label, String data) {
